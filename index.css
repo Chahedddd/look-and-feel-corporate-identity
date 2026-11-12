@@ -1,0 +1,962 @@
+
+/* De basis van de pagina */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    color: #252525;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* De bovenkant van de pagina */
+
+header {
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #F2F2F2;
+    margin-left: 2px;
+    margin-right: 16px;
+}
+
+header h1 {
+    flex: 1;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    color: #322F2F;
+}
+
+/* Hamburger-menu zonder JavaScript */
+#menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    cursor: pointer;
+    display: block;
+}
+
+/* Het menu is standaard verborgen */
+header nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Het menu verschijnt na klikken */
+#menu-toggle:checked ~ nav {
+    display: flex;
+}
+
+/* De links in het menu */
+header nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+}
+
+/* De inhoud van de pagina */
+main {
+    padding: 20px;
+    padding-bottom: 135px;
+}
+
+main h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.welcome {
+    text-align: center;
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: -20px;
+    margin-bottom: 35px;
+    color: #494949;
+}
+
+/* De drie gekleurde blokken */
+
+/* Welkomstgedeelte met de drie gekleurde knoppen */
+.welcome-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 18px;
+    margin: 20px 0;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.colleagues,
+.opportunities, 
+.events {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    padding: 12px;
+    margin: 0;
+    border-radius: 12px;
+    color: #494949;
+    font-weight: normal;
+    text-align: center;
+    box-shadow: 0 4px 0 #b8b8b8;
+    font-size: 19px;
+}
+
+.colleagues {
+    background-color: var(--background-pink-light);
+}
+
+.events {
+    grid-column: 1 / -1;
+    min-height: 65px;
+    margin-top: -2px;
+    background-color: var(--background-blue-light);
+}
+
+.opportunities {
+    background-color: var(--background-green-light);
+    min-width: 155px;
+}
+
+
+
+/* De aanbevolen inhoud */
+main section {
+    margin-top: 25px;
+}
+
+.recommended h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #494949;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top: -8px;
+}
+
+.recommended > p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #322F2F;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+/* De filterbalk */
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 15px 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.filter select {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #E6E6E6;
+    font-size: 16px;
+    color: #494949;
+}
+
+.filter button {
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* De rij waarin de kaarten staan */
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0 8px 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-top: 30px;
+}
+
+.cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Alle kaarten krijgen dezelfde grootte */
+.card {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    height: 290px;
+    box-sizing: border-box;
+    
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+/* Anthony Martina */
+.anthony-card h3 {
+    font-size: 20px;
+    color: #322F2F;
+}
+
+.anthony-card h4 {
+    padding-top: 8px;
+}
+
+.anthony-card .top p {
+    font-size: 16px;
+    color: #494949;
+}
+
+.anthony-card .pill {
+    margin-top: 25px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: #494949;
+}
+
+/* De naam en knoppen bovenaan de kaart */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.top button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* De categorieknop */
+.pill {
+    border: 1px solid #999999;
+    border-radius: 20px;
+    padding: 10px 18px;
+    background-color: white;
+}
+
+/* De swipe-indicatie onder de kaarten */
+.swipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: #777777;
+    font-size: 14px;
+    margin: 16px 0 28px;
+    margin-bottom: -40px;
+}
+
+.swipe svg {
+    margin-bottom: 8px;
+}
+
+/* De navigatiebalk onderaan */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 75px;
+    padding: 12px 0;
+    z-index: 1001;
+}
+
+/* De icoontjes onderaan */
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer svg {
+    width: 40px;
+    height: 40px;
+}
+
+.bookmarked {
+    margin-top: 35px;
+}
+
+.bookmarked h2 {
+    font-size: 18px;
+}
+
+/* Header: logo en hamburgermenu */
+header > svg,
+header > img {
+    flex-shrink: 0;
+}
+
+.menu-button {
+    flex-shrink: 0;
+}
+
+.divider-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 25px auto;
+    width: 90%;
+    margin-top: 35px;
+    margin-bottom: 8px;
+}
+
+.divider-two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin: 25px auto;
+    width: 90%;
+    margin-top: 55px;
+    margin-bottom: -20px;
+}
+
+.divider span {
+    width: 25px;
+    height: 2px;
+    background-color: #dddddd;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+    width: 7px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+
+.card h4 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin: 24px 0 16px;
+}
+
+.card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.card-actions button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile img {
+    width: 75px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+/* Medische gegevens in de kaarten */
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detail svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.detail p {
+    margin: 0;
+}
+
+/* Knoppen bovenaan de kaart */
+.card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.card-actions button {
+    padding: 4px;
+}
+
+/* Button onder de medische gegevens */
+.details .pill {
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #494949;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Webinar-kaart */
+.webinar-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Knoppen rechtsboven */
+.webinar-card > .top {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 24px;
+}
+
+/* Datum en evenementinformatie */
+.webinar-card .event-details {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    margin: 0;
+    min-width: 0;
+}
+
+/* Datum en dag */
+.webinar-card .event-details > div:first-child {
+    border-radius: 10px;
+    padding: 15px 15px;
+    width: 75px;
+    height: 70px;
+    text-align: center;
+    background: linear-gradient(#f2f2f2 60%, #cdede9 40%)
+}
+
+.webinar-card .event-details > div:first-child p {
+    font-weight: bold;
+    position: relative;
+    top: 8px;
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.webinar-card .event-details > div:first-child strong {
+    font-size: 20px;
+    position: relative;
+    bottom: 4px;
+    right: 1px;
+}
+
+/* Alle informatie bij de datum */
+.webinar-card .event-details p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 3px;
+    overflow-wrap: break-word;
+    margin-left: -10px;
+}
+
+/* Webinar-titel */
+.webinar-card h4 {
+    font-size: 20px;
+    line-height: 1.35;
+    margin: 4px 0 0;
+    overflow-wrap: break-word;
+}
+
+/* Deelnemers */
+.webinar-card > p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 4px 0 0;
+}
+
+.comments {
+    font-size: 14px;
+    margin: 0;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Noor Becker - vraagkaart */
+.question-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Naam en knoppen bovenaan */
+.question-card > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.question-card > .top h3 {
+    font-size: 16px;
+    margin: 0 0 4px;
+}
+
+.question-card > .top p {
+    font-size: 16px;
+    margin: 0;
+    color: #494949;
+}
+
+/* Titel van de vraag */
+.question-card h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin: 8px 0 0;
+    overflow-wrap: break-word;
+    font-weight: bold;
+}
+
+/* Aantal reacties */
+.question-card .comments {
+    font-size: 14px;
+    margin: 0;
+    margin-top: -5px;
+}
+
+/* Onderwerpen */
+.question-card .topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.question-card .topics .pill {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 14px;
+    border-radius: 20px;
+    color: #494949;
+}
+
+/* Elise Thompson - profielkaart */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Profielfoto, naam en knoppen */
+.profile-card > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.profile-card .profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+}
+
+.profile-card .profile > img,
+.profile-card .profile > svg {
+    width: 80px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 45px;
+    flex-shrink: 0;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+.profile-card .profile h3 {
+    font-size: 20px;
+    margin: 0 0 4px;
+    margin-top: 20px;
+}
+
+.profile-card .profile p {
+    font-size: 15px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #494949;
+}
+
+/* Knoppen rechtsboven */
+.profile-card .card-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+/* Medische gegevens */
+.profile-card .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.profile-card .detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.profile-card .detail svg {
+    width: 15px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.profile-card .detail p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Knop onderaan */
+.profile-card .details .pill {
+    margin-top: 8px;
+}
+
+/* Daniel Kim - quote kaart */
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quote-card > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.quote-card > .top h3 {
+    font-size: 20px;
+    margin: 0 0 4px;
+}
+
+.quote-card > .top p {
+    font-size: 14px;
+    margin: 0;
+    color: #494949;
+}
+
+.quote-card blockquote {
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5;
+    background-color: #E4F3E8;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 8px 0;
+    max-height: 60px;
+    max-width: 370px;
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    line-height: 1.2;
+}
+
+.quote-card .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: -5px;
+}
+
+.quote-card .detail svg {
+    width: 16px;
+    height: 16px;
+}
+
+.quote-card .detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quote-card .detail p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Elise: foto en informatie */
+
+/* Minder ruimte aan de zijkanten */
+.profile-card {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Naam en functie lager naast de foto */
+.profile-card .profile > div {
+    padding-top: 35px;
+}
+
+/* Medische gegevens: tekst op één regel */
+.profile-card .detail {
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.profile-card .detail p {
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+/* Open to questions: alleen zo breed als de tekst */
+.profile-card > .pill {
+    align-self: flex-start;
+    width: auto;
+    margin-top: 0;
+    white-space: nowrap;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #494949;
+}
+
+/* Labels van Anthony */
+.anthony-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.anthony-card .card-labels {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.anthony-card .label-project,
+.anthony-card .label-internship {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.anthony-card .label-project {
+    background-color: #E68EC5;
+    color: #000000;
+}
+
+.anthony-card .label-internship {
+    background-color: var(--background-pink-light);
+    color: #000000;
+}
+
+/* Question card labels */
+
+.question-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.question-card .card-labels {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.question-card .label-open-question {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #66B3DF;
+    color: #000000;
+}
+
+/* Webinar card labels */
+
+.webinar-card {
+    position: relative;
+    margin-top: 20px;
+}
+
+.webinar-card .card-labels {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    z-index: 2;
+}
+
+.webinar-card .label-webinar {
+    padding: 10px 14px;
+    border-radius: 13px 13px 0 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #66C7B4;
+    color: #000000;
+}
+
+#anthony-popup {
+    display: none;
+}
+
+.anthony-popup {
+    display: none;
+}
+
+.anthony-card {
+    cursor: pointer;
+    position: relative;
+}
+
+#anthony-popup:checked ~ .anthony-popup {
+    display: block;
+    position: fixed;
+    inset: 15% 0 0;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.close-popup {
+    display: block;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.card-click-area {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card-actions,
+.anthony-card .pill {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
