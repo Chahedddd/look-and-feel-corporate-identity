@@ -7,8 +7,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #F2F2F2;
-    color: #252525;
+   
 }
 
 a {
@@ -28,7 +27,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #F2F2F2;
     margin-left: 2px;
     margin-right: 16px;
 }
@@ -40,7 +38,7 @@ header h1 {
     letter-spacing: 2px;
     text-align: center;
     margin: 0;
-    color: #322F2F;
+    
 }
 
 /* Hamburger-menu zonder JavaScript */
@@ -91,7 +89,7 @@ main h2 {
     font-size: 22px;
     margin-top: -20px;
     margin-bottom: 35px;
-    color: #494949;
+    
 }
 
 /* De drie gekleurde blokken */
@@ -181,7 +179,6 @@ main section {
     padding: 10px;
     border: none;
     border-radius: 8px;
-    background-color: #E6E6E6;
     font-size: 16px;
     color: #494949;
 }
@@ -220,7 +217,7 @@ main section {
     height: 290px;
     box-sizing: border-box;
     
-    background-color: white;
+    
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -268,7 +265,7 @@ main section {
     border: 1px solid #999999;
     border-radius: 20px;
     padding: 10px 18px;
-    background-color: white;
+    
 }
 
 /* De swipe-indicatie onder de kaarten */
@@ -736,7 +733,6 @@ main {
     font-size: 16px;
     font-style: normal;
     line-height: 1.5;
-    background-color: #E4F3E8;
     padding: 16px;
     border-radius: 8px;
     margin: 8px 0;
@@ -835,7 +831,7 @@ main {
 }
 
 .anthony-card .label-project {
-    background-color: #E68EC5;
+    background-color: var(--background-pink);
     color: #000000;
 }
 
@@ -865,7 +861,7 @@ main {
     border-radius: 13px 13px 0 0;
     font-size: 16px;
     line-height: 20px;
-    background-color: #66B3DF;
+    background-color: var(--background-blue);
     color: #000000;
 }
 
@@ -890,7 +886,7 @@ main {
     border-radius: 13px 13px 0 0;
     font-size: 16px;
     line-height: 20px;
-    background-color: #66C7B4;
+    background-color: var(--background-green-bright);
     color: #000000;
 }
 
