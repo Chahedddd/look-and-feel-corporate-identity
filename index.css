@@ -15,7 +15,6 @@ a {
 }
 
 /* De bovenkant van de pagina */
-
 header {
     padding: 18px 20px;
     display: flex;
@@ -36,8 +35,7 @@ header h1 {
     font-weight: 600;
     letter-spacing: 2px;
     text-align: center;
-    margin: 0;
-    
+    margin: 0;  
 }
 
 /* Hamburger-menu zonder JavaScript */
@@ -88,12 +86,9 @@ main h2 {
     font-size: 22px;
     margin-top: -20px;
     margin-bottom: 35px;
-    
 }
 
 /* De drie gekleurde blokken */
-
-/* Welkomstgedeelte met de drie gekleurde knoppen */
 .welcome-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -135,8 +130,6 @@ main h2 {
     background-color: var(--background-green-light);
     min-width: 155px;
 }
-
-
 
 /* De aanbevolen inhoud */
 main section {
@@ -211,8 +204,6 @@ main section {
     min-width: 0;
     height: 290px;
     box-sizing: border-box;
-    
-    
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -257,7 +248,6 @@ main section {
     border: 1px solid #999999;
     border-radius: 20px;
     padding: 10px 18px;
-    
 }
 
 /* De swipe-indicatie onder de kaarten */
@@ -754,8 +744,7 @@ main {
     margin: 0;
 }
 
-/* Elise: foto en informatie */
-
+/* Elise Thompson*/
 /* Minder ruimte aan de zijkanten */
 .profile-card {
     padding-left: 20px;
@@ -823,7 +812,6 @@ main {
 }
 
 /* Question card labels */
-
 .question-card {
     position: relative;
     margin-top: 20px;
@@ -847,7 +835,6 @@ main {
 }
 
 /* Webinar card labels */
-
 .webinar-card {
     position: relative;
     margin-top: 20px;
@@ -870,6 +857,7 @@ main {
     background-color: var(--background-green-bright);
 }
 
+/* Pop-up Anthony */
 #anthony-popup {
     display: none;
 }
