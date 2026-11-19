@@ -312,28 +312,6 @@ header > img {
     flex-shrink: 0;
 }
 
-.divider-one {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    margin: 25px auto;
-    width: 90%;
-    margin-top: 35px;
-    margin-bottom: 8px;
-}
-
-.divider-two {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    margin: 25px auto;
-    width: 90%;
-    margin-top: 55px;
-    margin-bottom: -20px;
-}
-
 .divider span {
     width: 25px;
     height: 2px;
