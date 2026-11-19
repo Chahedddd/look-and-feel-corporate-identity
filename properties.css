@@ -5,40 +5,50 @@
 @layer styleguide {
 
    @font-face {
-      font-family: "TASA Orbiter";
-      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Regular.ttf);
+      font-family: "TASA Orbiter", "Inter", sans-serif;
+      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Regular.woff2),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Regular.woff),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Regular.ttf);
       font-weight: 400;
       font-style: normal;
       font-display: fallback;
    }
 
    @font-face {
-      font-family: "TASA Orbiter";
-      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Medium.ttf);
+      font-family: "TASA Orbiter", "Inter", sans-serif;
+      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Medium.woff2),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Medium.woff),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Medium.ttf);
       font-weight: 500;
       font-style: normal;
       font-display: fallback;
    }
 
    @font-face {
-      font-family: "TASA Orbiter";
-      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-SemiBold.ttf);
+      font-family: "TASA Orbiter", "Inter", sans-serif;
+      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-SemiBold.woff2),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-SemiBold.woff),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-SemiBold.ttf);
       font-weight: 600;
       font-style: normal;
       font-display: fallback;
    }
 
    @font-face {
-      font-family: "TASA Orbiter";
-      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Bold.ttf);
+      font-family: "TASA Orbiter", "Inter", sans-serif;
+      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Bold.woff2),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Bold.woff),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-Bold.ttf);
       font-weight: 700;
       font-style: normal;
       font-display: fallback;
    }
 
    @font-face {
-      font-family: "TASA Orbiter";
-      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-ExtraBold.ttf);
+      font-family: "TASA Orbiter", "Inter", sans-serif;
+      src: url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-ExtraBold.woff2),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-ExtraBold.woff),
+         url(./assets/fonts/TASA_Orbiter/static/TASAOrbiter-ExtraBold.ttf);
       font-weight: 800;
       font-style: normal;
       font-display: fallback;
@@ -66,59 +76,94 @@
 
 
       /* MARK: icon colors */
-      --icon-light: light-dark(var(--white), oklch(from var(--base-night-rider) calc(l * 0.1) c h));
-      --icon-medium: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.7) c h), oklch(from var(--base-bleached-silk) calc(l * 0.8) c h));
-      --icon-dark: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.4) c h), oklch(from var(--base-bleached-silk) calc(l * 0.9) c h));
-      --icon-darkest: light-dark(var(--base-night-rider), var(--base-bleached-silk));
+      /* base colors */
+      --base-xavier-blue: hsl(202 65% 64%);
+      --base-cockatoo: hsl(168 46% 59%);
+      --base-lustful-wishes: hsl(322 64% 55%);
+      --base-night-rider: hsl(0 3% 19%);
+      --base-bleached-silk: hsl(0 0% 95%);
+      --base-eclipse: hsl(0 3% 24%);
+      --white: hsl(0 0% 100%);
 
-      --icon-dark-green: light-dark(oklch(from var(--base-cockatoo) calc(l * 0.4) c h), oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.6) c h));
-      --icon-dark-pink: light-dark(oklch(from var(--base-lustful-wishes) calc(l * 0.4) c h), oklch(from var(--base-lustful-wishes) calc(l + (1 - l) * 0.6) c h));
-      --icon-dark-blue: light-dark(oklch(from var(--base-xavier-blue) calc(l * 0.6) c h), oklch(from var(--base-xavier-blue) calc(l + (1 - l) * 0.6) c h));
-      --icon-light-green: light-dark(oklch(from var(--base-cockatoo) calc(l * 0.9) c h), oklch(from var(--base-cockatoo) calc(l * 0.7) c h));
-      --icon-light-pink: light-dark(oklch(from var(--base-lustful-wishes) calc(l * 0.9) c h), oklch(from var(--base-lustful-wishes) calc(l * 0.8) c h));
-      --icon-light-blue: light-dark(oklch(from var(--base-xavier-blue) calc(l * 0.9) c h), oklch(from var(--base-xavier-blue) calc(l * 0.6) c h));
+      /* MARK: color-scheme */
+      color-scheme: light dark;
 
-      /* MARK: icon colors */
-      --button-shadow: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.8) c h), oklch(from var(--base-bleached-silk) calc(l * 0.2) c h));
-      --button-dropshow: light-dark(oklch(from var(--base-night-rider) calc(l * 0.4) c h / 25%), oklch(from var(--base-night-rider) calc(l * 0.4) c h / 25%));
+      /* MARK: button */
+      --button-shadow: light-dark(hsl(from var(--base-bleached-silk) h s calc(l * 0.8)),
+            hsl(from var(--base-bleached-silk) h s calc(l * 0.2)));
+      --button-dropshow: hsl(from var(--base-night-rider) h s calc(l * 0.4) / 25%);
 
-      /* MARK: hover colors */
-      --hover-green: light-dark(var(--base-cockatoo), var(--base-cockatoo));
-      --hover-pink: light-dark(var(--base-lustful-wishes), var(--base-lustful-wishes));
-      --hover-blue: light-dark(var(--base-xavier-blue), var(--base-xavier-blue));
-
-      /* MARK: background colors */
-      --background-darkest: light-dark(oklch(from var(--base-night-rider) calc(l * 0.1) c h), oklch(from var(--base-night-rider) calc(l + (1 - l) * 0.7) c h));
-      --background-darker: light-dark(oklch(from var(--base-night-rider) calc(l * 0.6) c h), oklch(from var(--base-night-rider) calc(l + (1 - l) * 0.4) c h));
-      --background-dark: light-dark(oklch(from var(--base-night-rider) calc(l + (1 - l) * 0.8) c h), oklch(from var(--base-eclipse) calc(l + (1 - l) * 0.1) c h));
+      /* MARK: background */
+      --background-darkest: light-dark(hsl(from var(--base-night-rider) h s calc(l * 0.1)),
+            hsl(from var(--base-night-rider) h s calc(l + (100 - l) * 0.7)));
+      --background-darker: light-dark(hsl(from var(--base-night-rider) h s calc(l * 0.6)),
+            hsl(from var(--base-night-rider) h s calc(l + (100 - l) * 0.4)));
+      --background-dark: light-dark(hsl(from var(--base-night-rider) h s calc(l + (100 - l) * 0.8)),
+            hsl(from var(--base-eclipse) h s calc(l + (100 - l) * 0.1)));
       --background-medium: light-dark(var(--base-bleached-silk), var(--base-eclipse));
-      --background-light: light-dark(var(--white), oklch(from var(--base-eclipse) calc(l * 0.9) c h));
-      --background-transparent: light-dark(oklch(from var(--white) l c h / 50%), oklch(from var(--base-eclipse) l c h / 50%));
-      --background-green: light-dark(oklch(from var(--base-cockatoo) calc(l * 0.8) c h), oklch(from var(--base-cockatoo) calc(l * 0.5) c h));
-      --background-green-bright: light-dark(oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.2) c h), oklch(from var(--base-cockatoo) calc(l * 0.8) c h));
-      --background-pink: light-dark(oklch(from var(--base-lustful-wishes) calc(l + (1 - l) * 0.1) c h), oklch(from var(--base-lustful-wishes) calc(l * 0.9) c h));
-      --background-blue: light-dark(oklch(from var(--base-xavier-blue) calc(l + (1 - l) * 0.1) c h), oklch(from var(--base-xavier-blue) calc(l * 0.9) c h));
-      --background-green-light: light-dark(oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.6) c h), oklch(from var(--base-cockatoo) calc(l * 0.4) c h));
-      --background-pink-light: light-dark(oklch(from var(--base-lustful-wishes) calc(l + (1 - l) * 0.6) c h), oklch(from var(--base-lustful-wishes) calc(l * 0.4) c h));
-      --background-blue-light: light-dark(oklch(from var(--base-xavier-blue) calc(l + (1 - l) * 0.6) c h), oklch(from var(--base-xavier-blue) calc(l * 0.4) c h));
-      --background-green-lighter: light-dark(oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.9) c h), oklch(from var(--base-cockatoo) calc(l * 0.4) c h));
-      --background-pink-lighter: light-dark(oklch(from var(--base-lustful-wishes) calc(l + (1 - l) * 0.9) c h), oklch(from var(--base-lustful-wishes) calc(l * 0.4) c h));
-      --background-blue-lighter: light-dark(oklch(from var(--base-xavier-blue) calc(l + (1 - l) * 0.9) c h), oklch(from var(--base-xavier-blue) calc(l * 0.4) c h));
+      --background-light: light-dark(var(--white), hsl(from var(--base-eclipse) h s calc(l * 0.9)));
 
-      /* MARK: card colors */
-      --card-border: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.9) c h), oklch(from var(--base-eclipse) calc(l * 0.9) c h));
-      --card-shadow: light-dark(oklch(from var(--base-eclipse) l c h / 5%), oklch(from var(--base-eclipse) l c h / 5%));
+      --background-transparent: light-dark(hsl(from var(--white) h s l / 50%),
+            hsl(from var(--base-eclipse) h s l / 50%));
 
-      /* MARK: tect colors */
-      --text-darkest: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.3) c h), var(--base-bleached-silk));
-      --text-dark: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.4) c h), oklch(from var(--base-bleached-silk) calc(l * 0.9) c h));
-      --text-medium: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.5) c h), oklch(from var(--base-bleached-silk) calc(l * 0.8) c h));
-      --text-light: light-dark(oklch(from var(--base-bleached-silk) calc(l * 0.7) c h), oklch(from var(--base-bleached-silk) calc(l * 0.7) c h));
-      --text-lightest: light-dark(var(--white), oklch(from var(--base-night-rider) calc(l + (1 - l) * 0.1) c h));
-      --text-green: light-dark(oklch(from var(--base-cockatoo) calc(l * 0.4) c h), oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.6) c h));
-      --text-green-light: light-dark(oklch(from var(--base-cockatoo) calc(l * 0.4) c h), oklch(from var(--base-cockatoo) calc(l + (1 - l) * 0.6) c h));
-      --text-pink: light-dark(oklch(from var(--base-lustful-wishes) calc(l * 0.4) c h), oklch(from var(--base-lustful-wishes) calc(l + (1 - l) * 0.6) c h));
-      --text-blue: light-dark(oklch(from var(--base-xavier-blue) calc(l * 0.6) c h), oklch(from var(--base-xavier-blue) calc(l + (1 - l) * 0.6) c h));
+      --background-green: light-dark(hsl(from var(--base-cockatoo) h s calc(l * 0.8)),
+            hsl(from var(--base-cockatoo) h s calc(l * 0.5)));
+      --background-green-light: light-dark(hsl(from var(--base-cockatoo) h s calc(l + (100 - l) * 0.6)),
+            hsl(from var(--base-cockatoo) h s calc(l * 0.4)));
+      --background-green-lightest: light-dark(hsl(from var(--base-cockatoo) h s calc(l + (100 - l) * 0.9)),
+            hsl(from var(--base-cockatoo) h s calc(l * 0.4)));
+
+      --background-pink: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l + (100 - l) * 0.1)),
+            hsl(from var(--base-lustful-wishes) h s calc(l * 0.9)));
+      --background-pink-light: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l + (100 - l) * 0.6)),
+            hsl(from var(--base-lustful-wishes) h s calc(l * 0.4)));
+      --background-pink-lightest: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l + (100 - l) * 0.9)),
+            hsl(from var(--base-lustful-wishes) h s calc(l * 0.4)));
+
+      --background-blue: light-dark(hsl(from var(--base-xavier-blue) h s calc(l + (100 - l) * 0.1)),
+            hsl(from var(--base-xavier-blue) h s calc(l * 0.9)));
+      --background-blue-light: light-dark(hsl(from var(--base-xavier-blue) h s calc(l + (100 - l) * 0.6)),
+            hsl(from var(--base-xavier-blue) h s calc(l * 0.4)));
+      --background-blue-lightest: light-dark(hsl(from var(--base-xavier-blue) h s calc(l + (100 - l) * 0.9)),
+            hsl(from var(--base-xavier-blue) h s calc(l * 0.4)));
+
+      /* MARK: cards */
+      --card-border: light-dark(hsl(from var(--base-bleached-silk) h s calc(l * 0.9)),
+            hsl(from var(--base-eclipse) h s calc(l * 0.9)));
+      --card-shadow: hsl(from var(--base-eclipse) h s l / 5%);
+
+      /* MARK: text */
+      --text-darkest: light-dark(hsl(from var(--base-bleached-silk) h s calc(l * 0.3)),
+            var(--base-bleached-silk));
+      --text-dark: light-dark(hsl(from var(--base-bleached-silk) h s calc(l * 0.4)),
+            hsl(from var(--base-bleached-silk) h s calc(l * 0.9)));
+      --text-medium: light-dark(hsl(from var(--base-bleached-silk) h s calc(l * 0.5)),
+            hsl(from var(--base-bleached-silk) h s calc(l * 0.8)));
+      --text-light: hsl(from var(--base-bleached-silk) h s calc(l * 0.7));
+      --text-lightest: light-dark(var(--white),
+            hsl(from var(--base-night-rider) h s calc(l + (100 - l) * 0.1)));
+
+      --text-green-dark: light-dark(hsl(from var(--base-cockatoo) h s calc(l * 0.4)),
+            hsl(from var(--base-cockatoo) h s calc(l + (100 - l) * 0.6)));
+      --text-green: light-dark(hsl(from var(--base-cockatoo) h s calc(l * 0.4)),
+            hsl(from var(--base-cockatoo) h s calc(l + (100 - l) * 0.6)));
+      --text-green-light: light-dark(hsl(from var(--base-cockatoo) h s calc(l * 0.9)),
+            hsl(from var(--base-cockatoo) h s calc(l * 0.7)));
+
+      --text-pink-dark: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l * 0.4)),
+            hsl(from var(--base-lustful-wishes) h s calc(l + (100 - l) * 0.6)));
+      --text-pink: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l * 0.4)),
+            hsl(from var(--base-lustful-wishes) h s calc(l + (100 - l) * 0.6)));
+      --text-pink-light: light-dark(hsl(from var(--base-lustful-wishes) h s calc(l * 0.9)),
+            hsl(from var(--base-lustful-wishes) h s calc(l * 0.8)));
+
+      --text-blue-dark: light-dark(hsl(from var(--base-xavier-blue) h s calc(l * 0.6)),
+            hsl(from var(--base-xavier-blue) h s calc(l + (100 - l) * 0.6)));
+      --text-blue: light-dark(hsl(from var(--base-xavier-blue) h s calc(l * 0.4)),
+            hsl(from var(--base-xavier-blue) h s calc(l + (100 - l) * 0.6)));
+      --text-blue-light: light-dark(hsl(from var(--base-xavier-blue) h s calc(l * 0.9)),
+            hsl(from var(--base-xavier-blue) h s calc(l * 0.6)));
+
 
       /* Mark: typografie */
       font-family: 'TASA Orbiter', sans-serif;
@@ -160,6 +205,11 @@
       font-weight: 400;
       font-size: 1em;
       color: var(--text-dark);
+      max-width: 23em;
+
+      @media (prefers-color-scheme: dark) {
+         line-height: 1.32;
+      }
    }
 
    /* MARK: page background */
@@ -169,7 +219,24 @@
    }
 
    /* MARK: block qoute */
-   blockquote {}
+   blockquote {
+      align-self: start;
+      justify-self: center;
+      border-radius: 8px;
+      padding: 16px;
+      object-fit: cover;
+      background-color: var(--background-green-light);
+      color: var(--text-green);
+      max-width: 23em;
+
+      line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @media (prefers-color-scheme: dark) {
+         line-height: 1.32;
+      }
+   }
 
    blockquote:before,
    q:before {
@@ -188,6 +255,8 @@
       border: none;
       text-decoration: none;
       cursor: pointer;
+      border-radius: 8px;
+      pad: .5em;
 
       /* Change these for the rainbow colors*/
       --content-color: var(--text-dark);
@@ -195,29 +264,24 @@
       --background-color: var(--background-light);
       --background-color-hover: var(--background-darkest);
 
-
-      /* Use these in your svg with var(--content-color) */
-      --content: var(--content-color);
-      --background: var(--background-color);
-
-      color: var(--content);
-      background-color: var(--background);
+      color: var(--content-color);
+      background-color: var(--background-color);
 
       &:hover,
       &:focus-visible {
-         --content: var(--content-color-hover);
-         --background: var(--background-color-hover);
+         color: var(--content-color-hover);
+         background-color: var(--background-color-hover);
       }
 
       &:active {
-         --content: var(--content-color);
-         --background: var(--background-color);
+         color: var(--content-color);
+         background-color: var(--background-color);
       }
 
       /* For when a button has to look pressed */
       &.active {
-         --content: var(--content-color-hover);
-         --background: var(--background-color-hover);
+         color: var(--content-color-hover);
+         background-color: var(--background-color-hover);
       }
    }
 
@@ -225,7 +289,6 @@
    .button-raised {
       box-shadow: 0px 4px 0px var(--button-shadow);
       translate: 0px -4px;
-      border-radius: 8px;
 
       @media (prefers-reduced-motion: no-preference) {
          transition: 0.1s;
@@ -248,44 +311,80 @@
       }
    }
 
+   /* MARK: cards */
+   .card {
+      display: grid;
+      background-color: var(--background-light);
+      border-radius: 1.5rem;
+      border: 3px solid var(--background-medium);
+      padding: 1rem;
+      box-shadow: 0px 0px 15px var(--card-shadow);
+      width: 348px;
+      height: 300px;
+   }
+
+   /* MARK: divider */
+   .divider {
+      &::after {
+         display: block;
+         --i: calc(100% / 14);
+         height: 2px;
+         content: "";
+         margin-inline: 3rem;
+         background-image:
+            linear-gradient(to right, var(--background-dark) calc(var(--i) / 2),
+               transparent calc(var(--i) / 2) calc(var(--i) * 1.5),
+               var(--background-dark) calc(var(--i) * 1.5) calc(var(--i) * 2.5),
+               transparent calc(var(--i) * 2.5) calc(var(--i) * 3.5),
+               var(--background-dark) calc(var(--i) * 3.5) calc(var(--i) * 4.5),
+               transparent calc(var(--i) * 4.5) calc(var(--i) * 5.5),
+               var(--background-dark) calc(var(--i) * 5.5) calc(var(--i) * 6.5),
+               transparent calc(var(--i) * 6.5) calc(var(--i) * 7.5),
+               var(--background-dark) calc(var(--i) * 7.5) calc(var(--i) * 8.5),
+               transparent calc(var(--i) * 8.5) calc(var(--i) * 9.5),
+               var(--background-dark) calc(var(--i) * 9.5) calc(var(--i) * 10.5),
+               transparent calc(var(--i) * 10.5) calc(var(--i) * 11.5),
+               var(--background-dark) calc(var(--i) * 11.5) calc(var(--i) * 12.5),
+               transparent calc(var(--i) * 12.5) calc(var(--i) * 13.5),
+               var(--background-dark) calc(var(--i) * 13.5));
+
+         @media (min-width: 900px) {
+            content: "";
+            background-image: none;
+         }
+      }
+   }
+
    /* MARK: button flat */
-   .button-flat {
+   .button-plain {
       border-radius: 8px;
+      --content-color-hover: var(--content-color);
+      --background-color: transparent;
+      --background-color-hover: transparent;
    }
 
    /* MARK: button tab */
    .button-tab {
       position: relative;
 
-
       &:hover,
       &:focus-visible {
-         --content: var(--content-color);
-         --background: var(--background-color);
-
-
          &::before {
             height: 6px;
-            background: var(--icon-dark);
+            background: var(--text-dark);
          }
       }
 
       &:active {
-         --content: var(--content-color);
-         --background: var(--background-color);
-
          &::before {
             height: 1px;
          }
       }
 
       &.active {
-         --content: var(--content-color);
-         --background: var(--background-color);
-
          &::before {
             height: 6px;
-            background: var(--icon-dark);
+            background: var(--text-dark);
          }
       }
 
@@ -300,7 +399,7 @@
 
          width: 80%;
          height: 4px;
-         background: var(--icon-medium);
+         background: var(--text-medium);
 
          @media (prefers-reduced-motion: no-preference) {
             transition: 0.1s;
@@ -392,11 +491,9 @@
    /* MARK: mesh terms */
    .mesh-terms {
       display: flex;
-      overflow-x: scroll;
+      flex-wrap: wrap;
       gap: 10px;
-      z-index: 1;
       height: min-content;
-      scrollbar-width: none;
 
       li {
          width: max-content;
@@ -410,4 +507,185 @@
          flex-shrink: 0;
       }
    }
+
+   /* MARK: select and option element */
+   select {
+      background-color: var(--background-dark);
+      font-size: 1em;
+      text-align: center;
+      border-radius: 8px;
+      padding: 8px;
+      height: fit-content;
+      width: 10em;
+      text-wrap: nowrap;
+      color: var(--text-dark);
+
+      &:open {
+         border-radius: 8px 8px 0px 0px;
+         background-color: var(--background-darkest);
+         color: var(--text-lightest);
+      }
+
+      appearance: base-select;
+      border: none;
+
+      &::picker(select) {
+         appearance: base-select;
+         border: none;
+         color: var(--text-lightest);
+      }
+
+      &::picker-icon {
+         content: "▾";
+         scale: 1.4;
+         transition: rotate 0.2s;
+         rotate: 90deg;
+      }
+
+      &:open::picker-icon {
+         rotate: 0deg;
+      }
+
+      option:last-child {
+         border-radius: 0px 0px 8px 8px;
+      }
+
+      option {
+         background-color: var(--background-darkest);
+         font-weight: 400;
+         padding: 8px;
+         transition: 0.2s;
+
+         &:hover {
+            color: var(--text-darkest);
+            background-color: var(--background-light);
+         }
+
+         &::checkmark {
+            display: none;
+         }
+      }
+   }
+
+   /* MARK: toggle */
+   .toggle-pill {
+      appearance: none;
+      font: inherit;
+      background-color: var(--background-dark);
+      width: 5em;
+      height: 2em;
+      margin: 0;
+      border-radius: 1em;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &::after {
+         content: "";
+         display: block;
+         width: 3em;
+         height: 2em;
+         scale: .8;
+         background-color: var(--background-light);
+         border-radius: inherit;
+         transition: 0.5s;
+         box-shadow: 0px 3px 5px var(--button-dropshow);
+      }
+
+      &:checked {
+         background-color: var(--background-green);
+      }
+
+      &:checked::after {
+         translate: 2em;
+      }
+   }
+
+   /* MARK: text field */
+   input[type="email"],
+   input[type="tel"],
+   input[type="text"],
+   input[type="search"],
+   textarea,
+   input[type="password"] {
+      background-color: transparent;
+      border: 2px solid var(--background-dark);
+      padding: .8em;
+      border-radius: 8px;
+
+      &::placeholder {
+         color: var(--text-light);
+         font: inherit;
+         font-size: 1em;
+         font-weight: 100;
+      }
+
+      &:user-invalid {
+         border-color: var(--text-pink-light);
+      }
+
+      &:user-valid {
+         border-color: var(--text-green-light);
+      }
+   }
+
+
+   .password-field {
+      display: grid;
+      grid-template-columns: 200px min-content;
+      grid-template-rows: min-content min-content;
+      place-items: center;
+
+      label {
+         grid-column: 1/2;
+         grid-row: 1/2;
+         width: 100%;
+      }
+
+      input {
+         grid-column: 1/2;
+         grid-row: 2/-1;
+         width: 100%;
+         border-radius: 8px 0px 0px 8px;
+         border-right: 0;
+         margin: 0;
+
+         &:focus {
+            border-color: var(--text-darkest);
+            outline: none;
+         }
+      }
+
+      &:has(input:focus) button {
+         border-color: var(--text-darkest);
+      }
+
+      button {
+         grid-column: 2/3;
+         grid-row: 2/-1;
+         place-self: start;
+         height: 100%;
+         width: 100%;
+         background-color: transparent;
+         border: 2px solid var(--background-dark);
+         border-radius: 0px 8px 8px 0px;
+         border-left: 0;
+         padding-right: .5em;
+
+         input:user-valid+& {
+            border-color: var(--text-green-light);
+         }
+
+
+         &:focus {
+            outline: none;
+
+            svg {
+               outline: 2px solid var(--text-darkest);
+               border-radius: 8px;
+            }
+         }
+      }
+   }
+
+
 }
