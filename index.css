@@ -272,8 +272,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: white;
-    border-top: 1px solid #eeeeee;
+    background-color: var(--background-light);
     display: flex;
     justify-content: center;
     gap: 20px;
