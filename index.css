@@ -1,5 +1,5 @@
 
-/* De basis van de pagina */
+/* MARK: De basis van de pagina */
 * {
     box-sizing: border-box;
 }
@@ -14,7 +14,7 @@ a {
     text-decoration: none;
 }
 
-/* De bovenkant van de pagina */
+/* MARK: De bovenkant van de pagina */
 header {
     padding: 18px 20px;
     display: flex;
@@ -38,7 +38,7 @@ header h1 {
     margin: 0;  
 }
 
-/* Hamburger-menu zonder JavaScript */
+/* MARK: Hamburger-menu zonder JavaScript */
 #menu-toggle {
     display: none;
 }
@@ -48,7 +48,7 @@ header h1 {
     display: block;
 }
 
-/* Het menu is standaard verborgen */
+/* MARK: Het menu is standaard verborgen */
 header nav {
     display: none;
     width: 100%;
@@ -56,12 +56,12 @@ header nav {
     gap: 12px;
 }
 
-/* Het menu verschijnt na klikken */
+/* MARK: Het menu verschijnt na klikken */
 #menu-toggle:checked ~ nav {
     display: flex;
 }
 
-/* De links in het menu */
+/* MARK: De links in het menu */
 header nav a {
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ header nav a {
     padding: 10px;
 }
 
-/* De inhoud van de pagina */
+/* MARK: De inhoud van de pagina */
 main {
     padding: 20px;
     padding-bottom: 135px;
@@ -88,7 +88,7 @@ main h2 {
     margin-bottom: 35px;
 }
 
-/* De drie gekleurde blokken */
+/* MARK: De drie gekleurde blokken */
 .welcome-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -132,7 +132,7 @@ main h2 {
     min-width: 155px;
 }
 
-/* De aanbevolen inhoud */
+/* MARK: De aanbevolen inhoud */
 main section {
     margin-top: 25px;
 }
@@ -154,7 +154,7 @@ main section {
     margin-top: 0;
 }
 
-/* De filterbalk */
+/* MARK: De filterbalk */
 .filter {
     display: flex;
     justify-content: space-between;
@@ -179,7 +179,7 @@ main section {
     cursor: pointer;
 }
 
-/* De rij waarin de kaarten staan */
+/* MARK: De rij waarin de kaarten staan */
 .cards {
     display: flex;
     flex-direction: row;
@@ -198,7 +198,7 @@ main section {
     display: none;
 }
 
-/* Alle kaarten krijgen dezelfde grootte */
+/* MARK: Alle kaarten krijgen dezelfde grootte */
 .card {
     flex: 0 0 100%;
     width: 100%;
@@ -211,7 +211,7 @@ main section {
     scroll-snap-align: start;
 }
 
-/* Anthony Martina */
+/* MARK: Anthony Martina */
 .anthony-card h3 {
     font-size: 20px;
 }
@@ -230,7 +230,7 @@ main section {
     font-size: 15px;
 }
 
-/* De naam en knoppen bovenaan de kaart */
+/* MARK: De naam en knoppen bovenaan de kaart */
 .top {
     display: flex;
     justify-content: space-between;
@@ -244,14 +244,14 @@ main section {
     cursor: pointer;
 }
 
-/* De categorieknop */
+/* MARK: De categorieknop */
 .pill {
     border: 1px solid #999999;
     border-radius: 20px;
     padding: 10px 18px;
 }
 
-/* De swipe-indicatie onder de kaarten */
+/* MARK: De swipe-indicatie onder de kaarten */
 .swipe {
     display: flex;
     flex-direction: column;
@@ -267,7 +267,7 @@ main section {
     margin-bottom: 20px;
 }
 
-/* De navigatiebalk onderaan */
+/* MARK: De navigatiebalk onderaan */
 footer {
     position: fixed;
     bottom: 0;
@@ -283,7 +283,7 @@ footer {
     z-index: 1001;
 }
 
-/* De icoontjes onderaan */
+/* MARK: De icoontjes onderaan */
 footer a {
     display: flex;
     align-items: center;
@@ -304,7 +304,7 @@ footer svg {
     margin-top: -15px;
 }
 
-/* Header: logo en hamburgermenu */
+/* MARK: Header: logo en hamburgermenu */
 header > svg,
 header > img {
     flex-shrink: 0;
@@ -365,7 +365,7 @@ header > img {
     border-radius: 40px;
 }
 
-/* Medische gegevens in de kaarten */
+/* MARK: Medische gegevens in de kaarten */
 .details {
     display: flex;
     flex-direction: column;
@@ -390,7 +390,7 @@ header > img {
     margin: 0;
 }
 
-/* Knoppen bovenaan de kaart */
+/* MARK: Knoppen bovenaan de kaart */
 .card-actions {
     display: flex;
     align-items: center;
@@ -402,7 +402,7 @@ header > img {
     padding: 4px;
 }
 
-/* Button onder de medische gegevens */
+/* MARK: Button onder de medische gegevens */
 .details .pill {
     margin-top: 8px;
     padding: 10px 18px;
@@ -428,14 +428,14 @@ main {
     min-width: 0;
 }
 
-/* Webinar-kaart */
+/* MARK: Webinar-kaart */
 .webinar-card {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Knoppen rechtsboven */
+/* MARK: Knoppen rechtsboven */
 .webinar-card > .top {
     display: flex;
     justify-content: flex-end;
@@ -443,7 +443,7 @@ main {
     min-height: 24px;
 }
 
-/* Datum en evenementinformatie */
+/* MARK: Datum en evenementinformatie */
 .webinar-card .event-details {
     display: grid;
     grid-template-columns: 90px minmax(0, 1fr);
@@ -453,7 +453,7 @@ main {
     min-width: 0;
 }
 
-/* Datum en dag */
+/* MARK: Datum en dag */
 .webinar-card .event-details > div:first-child {
     border-radius: 10px;
     padding: 15px 15px;
@@ -478,7 +478,7 @@ main {
     right: 1px;
 }
 
-/* Alle informatie bij de datum */
+/* MARK: Alle informatie bij de datum */
 .webinar-card .event-details p {
     font-size: 16px;
     line-height: 1.4;
@@ -487,7 +487,7 @@ main {
     margin-left: -10px;
 }
 
-/* Webinar-titel */
+/* MARK: Webinar-titel */
 .webinar-card h4 {
     font-size: 20px;
     line-height: 1.35;
@@ -495,7 +495,7 @@ main {
     overflow-wrap: break-word;
 }
 
-/* Deelnemers */
+/* MARK: Deelnemers */
 .webinar-card > p {
     font-size: 16px;
     line-height: 1.4;
@@ -513,14 +513,14 @@ main {
     gap: 8px;
 }
 
-/* Noor Becker - vraagkaart */
+/* MARK: Noor Becker - vraagkaart */
 .question-card {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-/* Naam en knoppen bovenaan */
+/* MARK: Naam en knoppen bovenaan */
 .question-card > .top {
     display: flex;
     justify-content: space-between;
@@ -538,7 +538,7 @@ main {
     margin: 0;
 }
 
-/* Titel van de vraag */
+/* MARK: Titel van de vraag */
 .question-card h4 {
     font-size: 20px;
     font-weight: 400;
@@ -548,14 +548,14 @@ main {
     font-weight: bold;
 }
 
-/* Aantal reacties */
+/* MARK: Aantal reacties */
 .question-card .comments {
     font-size: 14px;
     margin: 0;
     margin-top: -5px;
 }
 
-/* Onderwerpen */
+/* MARK: Onderwerpen */
 .question-card .topics {
     display: flex;
     flex-wrap: wrap;
@@ -572,7 +572,7 @@ main {
     border-radius: 20px;
 }
 
-/* Elise Thompson - profielkaart */
+/* MARK: Elise Thompson - profielkaart */
 .profile-card {
     display: flex;
     flex-direction: column;
@@ -580,7 +580,7 @@ main {
     margin-top: 20px;
 }
 
-/* Profielfoto, naam en knoppen */
+/* MARK: Profielfoto, naam en knoppen */
 .profile-card > .top {
     display: flex;
     justify-content: space-between;
@@ -619,14 +619,14 @@ main {
     margin-bottom: 20px;
 }
 
-/* Knoppen rechtsboven */
+/* MARK: Knoppen rechtsboven */
 .profile-card .card-actions {
     display: flex;
     gap: 8px;
     flex-shrink: 0;
 }
 
-/* Medische gegevens */
+/* MARK: Medische gegevens */
 .profile-card .details {
     display: flex;
     flex-direction: column;
@@ -654,12 +654,12 @@ main {
     margin: 0;
 }
 
-/* Knop onderaan */
+/* MARK: Knop onderaan */
 .profile-card .details .pill {
     margin-top: 8px;
 }
 
-/* Daniel Kim - quote kaart */
+/* MARK: Daniel Kim - quote kaart */
 .quote-card {
     display: flex;
     flex-direction: column;
@@ -723,19 +723,19 @@ main {
     margin: 0;
 }
 
-/* Elise Thompson*/
-/* Minder ruimte aan de zijkanten */
+/* MARK: Elise Thompson*/
+/* MARK: Minder ruimte aan de zijkanten */
 .profile-card {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-/* Naam en functie lager naast de foto */
+/* MARK: Naam en functie lager naast de foto */
 .profile-card .profile > div {
     padding-top: 35px;
 }
 
-/* Medische gegevens: tekst op één regel */
+/* MARK: Medische gegevens: tekst op één regel */
 .profile-card .detail {
     align-items: center;
     flex-wrap: nowrap;
@@ -746,7 +746,7 @@ main {
     font-size: 12px;
 }
 
-/* Open to questions: alleen zo breed als de tekst */
+/* MARK: Open to questions: alleen zo breed als de tekst */
 .profile-card > .pill {
     align-self: flex-start;
     width: auto;
@@ -757,7 +757,7 @@ main {
     font-size: 15px;
 }
 
-/* Labels van Anthony */
+/* MARK: Labels van Anthony */
 .anthony-card {
     position: relative;
     margin-top: 20px;
@@ -790,7 +790,7 @@ main {
     background-color: var(--background-pink-light);
 }
 
-/* Question card labels */
+/* MARK: Question card labels */
 .question-card {
     position: relative;
     margin-top: 20px;
@@ -813,7 +813,7 @@ main {
     background-color: var(--background-blue);
 }
 
-/* Webinar card labels */
+/* MARK: Webinar card labels */
 .webinar-card {
     position: relative;
     margin-top: 20px;
@@ -836,7 +836,7 @@ main {
     background-color: var(--background-green-bright);
 }
 
-/* Pop-up Anthony */
+/* MARK: Pop-up Anthony */
 #anthony-popup {
     display: none;
 }
