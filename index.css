@@ -681,14 +681,18 @@ main {
     font-size: 12px;
 }
 
+.card .profile-card .tami-card {
+    #;
+}
+
 
 /* MARK: Labels van Anthony */
-.anthony-card {
+.card {
     position: relative;
     margin-top: 20px;
 }
 
-.anthony-card .card-labels {
+.card .card-labels {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -699,38 +703,24 @@ main {
     z-index: 2;
 }
 
-.anthony-card .label-project,
-.anthony-card .label-internship {
+.card .label-project,
+.card .label-internship {
     padding: 10px 14px;
     border-radius: 13px 13px 0 0;
     font-size: 16px;
     line-height: 20px;
 }
 
-.anthony-card .label-project {
+.card .label-project {
     background-color: var(--background-pink);
 }
 
-.anthony-card .label-internship {
+.card .label-internship {
     background-color: var(--background-pink-light);
 }
 
 /* MARK: Question card labels */
-.question-card {
-    position: relative;
-    margin-top: 20px;
-}
-
-.question-card .card-labels {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -40px;
-    left: 20px;
-    z-index: 2;
-}
-
-.question-card .label-open-question {
+.card .label-open-question {
     padding: 10px 14px;
     border-radius: 13px 13px 0 0;
     font-size: 16px;
@@ -739,26 +729,12 @@ main {
 }
 
 /* MARK: Webinar card labels */
-.webinar-card {
-    position: relative;
-    margin-top: 20px;
-}
-
-.webinar-card .card-labels {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: -40px;
-    left: 20px;
-    z-index: 2;
-}
-
 .webinar-card .label-webinar {
     padding: 10px 14px;
     border-radius: 13px 13px 0 0;
     font-size: 16px;
     line-height: 20px;
-    background-color: var(--background-green-bright);
+    background-color: var(--background-blue-light);
 }
 
 /* MARK: Pop-up Anthony */
