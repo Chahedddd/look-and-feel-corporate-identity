@@ -111,7 +111,7 @@ main h2 {
     border-radius: 12px;
     font-weight: normal;
     text-align: center;
-    box-shadow: 0 4px 0 #b8b8b8;
+    box-shadow: 0 4px 0 var(--button-shadow);
     font-size: 19px;
     margin-bottom: 20px;
 }
