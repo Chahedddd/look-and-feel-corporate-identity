@@ -179,16 +179,13 @@ main section {
 /* MARK: De rij waarin de kaarten staan */
 .cards {
     display: flex;
-    flex-direction: row;
     gap: 16px;
-    padding: 0 8px 15px;
     overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-padding-inline: 8px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding-top: 30px;
+}
+
+.cards .card {
+    flex-shrink: 0; /*zodat de kaartjes de breedte van de styleguid krijgen */
 }
 
 .cards::-webkit-scrollbar {
@@ -196,17 +193,7 @@ main section {
 }
 
 /* MARK: Alle kaarten krijgen dezelfde grootte */
-.card {
-    flex: 0 0 100%;
-    width: 100%;
-    min-width: 0;
-    height: 290px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
-}
+
 
 /* MARK: Anthony Martina */
 .anthony-card h3 {
