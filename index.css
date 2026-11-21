@@ -311,16 +311,6 @@ header > img {
     flex-shrink: 0;
 }
 
-.divider span {
-    width: 25px;
-    height: 2px;
-    background-color: #dddddd;
-}
-
-.divider span:first-child,
-.divider span:last-child {
-    width: 7px;
-}
 
 .card h3 {
     font-size: 16px;
