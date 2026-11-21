@@ -221,11 +221,6 @@ main section {
     font-size: 16px;
 }
 
-.anthony-card .pill {
-    margin-top: 25px;
-    margin-bottom: 0;
-    font-size: 15px;
-}
 
 /* MARK: De naam en knoppen bovenaan de kaart */
 .top {
@@ -239,13 +234,6 @@ main section {
     border: none;
     background: none;
     cursor: pointer;
-}
-
-/* MARK: De categorieknop */
-.pill {
-    border: 1px solid #999999;
-    border-radius: 20px;
-    padding: 10px 18px;
 }
 
 /* MARK: De swipe-indicatie onder de kaarten */
@@ -390,12 +378,7 @@ header > img {
 }
 
 /* MARK: Button onder de medische gegevens */
-.details .pill {
-    margin-top: 8px;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-size: 15px;
-}
+
 
 html,
 body {
@@ -549,14 +532,10 @@ main {
     gap: 8px;
 }
 
-.question-card .topics .pill {
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    padding: 8px 12px;
-    border: 1px solid #999;
-    border-radius: 20px;
-    margin-top: 14px;
-    border-radius: 20px;
+
+.mesh-terms {
+    display: flex;
+    flex-direction: row;
 }
 
 /* MARK: Elise Thompson - profielkaart */
@@ -641,10 +620,6 @@ main {
     margin: 0;
 }
 
-/* MARK: Knop onderaan */
-.profile-card .details .pill {
-    margin-top: 8px;
-}
 
 /* MARK: Daniel Kim - quote kaart */
 .quote-card {
@@ -733,16 +708,6 @@ main {
     font-size: 12px;
 }
 
-/* MARK: Open to questions: alleen zo breed als de tekst */
-.profile-card > .pill {
-    align-self: flex-start;
-    width: auto;
-    margin-top: 0;
-    white-space: nowrap;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-size: 15px;
-}
 
 /* MARK: Labels van Anthony */
 .anthony-card {
@@ -861,11 +826,6 @@ main {
     z-index: 1;
 }
 
-.card-actions,
-.anthony-card .pill {
-    position: relative;
-    z-index: 2;
-}
 
 
 
