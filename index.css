@@ -533,9 +533,10 @@ main {
 }
 
 
-.mesh-terms {
+.question-card .mesh-terms {
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap; /*zodat ze naast elkaar staan*/
+    overflow: hidden; /*zodat de 2e li in de kaart blijft*/
 }
 
 /* MARK: Elise Thompson - profielkaart */
